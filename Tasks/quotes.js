@@ -2,14 +2,16 @@
 
 'use strict';
 
-const quotes = (string) => {
+const quotes = (str) => {
   let res = '';
   let odd = true;
-  for (const symbol of string) {
-    if (symbol === '"') {
+  for (const element of str) {
+    if (element === '"') {
       res += (odd ? '«' : '»');
       odd = !odd;
-    } else res += symbol;
+    } else {
+      res += element;
+    }
   }
   return res;
 };
